@@ -15,7 +15,7 @@ import java.sql.Statement;
 /**
  * Servlet implementation class DisplayEmployeeServlet
  */
-@WebServlet("/DisplayEmployeeServlet")
+//@WebServlet("/DisplayEmployeeServlet")
 public class DisplayEmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -85,3 +85,4 @@ public class DisplayEmployeeServlet extends HttpServlet {
 	}
 
 }
+
