@@ -50,16 +50,11 @@ public class EmployeeServlet extends HttpServlet {
         double salary = Double.parseDouble(request.getParameter("salary"));
 
         try {
-            // Load Driver
             Class.forName("com.mysql.cj.jdbc.Driver");
-
-            // Create Connection
             Connection con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/companydb",
                     "root",
                     "sherif@786");
-
-            // Prepare SQL
             String sql = "INSERT INTO employee VALUES (?, ?, ?, ?)";
 
             PreparedStatement ps = con.prepareStatement(sql);
@@ -84,4 +79,5 @@ public class EmployeeServlet extends HttpServlet {
             out.println("<h3>Error: " + e.getMessage() + "</h3>");
         }
     }
+
 }
