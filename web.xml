@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>EmployeeApp</display-name>
+  <welcome-file-list>
+    <welcome-file>employee.html</welcome-file>
+   
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>EmployeeServlet</servlet-name>
+    <servlet-class>com.employee.com.EmployeeServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>EmployeeServlet</servlet-name>
+    <url-pattern>/com.employee.com.EmployeeServlet/</url-pattern>
+</servlet-mapping>
+  <servlet>
+    <servlet-name>DisplayEmployeeServlet</servlet-name>
+    <servlet-class>com.employee.com.DisplayEmployeeServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>DisplayEmployeeServlet</servlet-name>
+    <url-pattern>com.employee.com.DisplayEmployeeServlet</url-pattern>
+</servlet-mapping>
+  <servlet>
+        <servlet-name>UpdateEmployeeServlet</servlet-name>
+        <servlet-class>com.employee.com.UpdateEmployeeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateEmployeeServlet</servlet-name>
+        <url-pattern>com.employee.com.UpdateEmployeeServlet</url-pattern>
+    </servlet-mapping>
+    
+<servlet>
+    <servlet-name>DeleteEmployeeServlet</servlet-name>
+    <servlet-class>com.employee.com.DeleteEmployeeServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>delete</servlet-name>
+    <url-pattern>/deleteEmployee</url-pattern>
+</servlet-mapping>
+
+
+  
+  
+  
+  
+  
+</web-app>
