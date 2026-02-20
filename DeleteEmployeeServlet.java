@@ -14,7 +14,7 @@ import java.sql.PreparedStatement;
 /**
  * Servlet implementation class DeleteEmployeeServlet
  */
-@WebServlet("/DeleteEmployeeServlet")
+//@WebServlet("/DeleteEmployeeServlet")
 public class DeleteEmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -44,7 +44,6 @@ public class DeleteEmployeeServlet extends HttpServlet {
 	        int id = Integer.parseInt(request.getParameter("id"));
 
 	        try {
-	            // Load MySQL Driver
 	            Class.forName("com.mysql.cj.jdbc.Driver");
 
 	            // Create Connection
@@ -52,8 +51,6 @@ public class DeleteEmployeeServlet extends HttpServlet {
 	                    "jdbc:mysql://localhost:3306/companydb",
 	                    "root",
 	                    "sherif@786");
-
-	            // Prepare SQL
 	            String sql = "DELETE FROM employee WHERE id=?";
 
 	            PreparedStatement ps = con.prepareStatement(sql);
@@ -74,4 +71,5 @@ public class DeleteEmployeeServlet extends HttpServlet {
 	            out.println("<h3>Error: " + e.getMessage() + "</h3>");
 	        }
 	    }
+
 	}
